@@ -42,7 +42,8 @@ app.get('/images', verifyCache, ({ query }, res) => {
     return res.status(200).json(cache.get(i.length));
   }
 
-  // else get new data.
+  // else get new data. 
+  // async simulator with Timeout
   setTimeout(() => {
     data = res.status(200).json(i);
     cache.set(i.length, i);
