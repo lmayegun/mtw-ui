@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import CardImg from './components/CardImg';
 import './App.css';
 
 const App = () => {
@@ -18,14 +19,21 @@ const App = () => {
 
   return (
     <div className='app'>
+      <ul>
       {
         images && images.map(img => (
-          <div key={img.id} >
-            <img src={`${img.url}.jpg`} alt=''/>
-            <img src={`${img.user.profile_image}.webp`} alt=''/>
-          </div>
+        <li key={img.id}>
+          <CardImg 
+              imgData={{
+                imgUrl: `${img.url}.jpg`, 
+                profileImg: `${img.user.profile_image}.webp`,
+                altDescr: img.alt_description
+              }}
+            />
+        </li>
         ))
       }
+      </ul>
     </div>
   );
 }
