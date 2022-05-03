@@ -1,80 +1,93 @@
 :root {
-    --columns: 1;
-  }
-  
-  body {
-    background: #fef200;
-  }
-  
-  ul {
-    margin-top: 110px;
-    display: grid;
-    grid-template-columns: repeat(var(--columns),1fr);
-  }
-  
-  li{
-    list-style: none;
-    position: relative;
-    padding-bottom: 120%;
-    margin-top: -50%;
-  }
-  li .wrap {
-    background: #1d1d1d;
-    border: solid #1d1d1d 5px;
-    padding: 20px;
-    position: absolute;
-    width: 80%;
-    min-height: 140px;
-    left: 50%;
-    top: 50%;
-    overflow: hidden;
-    transform: translateX(-50%) translateY(-60%);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  li .wrap:hover{
-    cursor: pointer;
-    opacity: 0.9;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    transition: all 0.35s ease-in-out;
-  }
-  
-  li .profile_img {
-    width: 20%;
-    display: none;
-  }
-  
-  li .card_img {
-    position: absolute;
-    width: 100%;
-    left: 50%;
-    top: 60%;
-    transform: translateX(-50%) translateY(-60%);
-    box-shadow: 5px -5px 10px rgb(0 0 0 / 30%);
-    transition-property: transform;
-    transition-duration: .3s;
-  }
+  --columns: 1;
+}
 
-  @media (min-width:600px){
-    :root {
-      --columns: 2;
-    }
+body {
+  background: #fef200;
+}
+
+ul {
+  margin-top: 110px;
+  display: grid;
+  grid-template-columns: repeat(var(--columns),1fr);
+}
+
+li{
+  list-style: none;
+  position: relative;
+  padding-bottom: 120%;
+  margin-top: -50%;
+}
+li .wrap {
+  background: #1d1d1d;
+  border: solid #1d1d1d 5px;
+  padding: 20px;
+  position: absolute;
+  width: 80%;
+  min-height: 140px;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  transform: translateX(-50%) translateY(-60%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+li .wrap:hover{
+  cursor: pointer;
+  opacity: 0.9;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: all 0.35s ease-in-out;
+}
+
+li .profile_img {
+  width: 20%;
+  display: none;
+}
+
+li .card_img {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 60%;
+  transform: translateX(-50%) translateY(-60%);
+  box-shadow: 5px -5px 10px rgb(0 0 0 / 30%);
+  transition-property: transform;
+  transition-duration: .3s;
+}
+
+.sample-form {
+  background: white;
+  padding: 10px 25px;
+}
+
+input{
+  width: 100%;
+}
+
+.input-range {
+  margin-bottom: 20px;
+}
+
+@media (min-width:600px){
+  :root {
+    --columns: 2;
   }
-  @media (min-width:900px){
-    :root {
-      --columns: 3;
-    }
+}
+@media (min-width:900px){
+  :root {
+    --columns: 3;
   }
-  @media (min-width:1200px){
-    :root {
-      --columns: 4;
-    }
+}
+@media (min-width:1200px){
+  :root {
+    --columns: 4;
   }
-  @media (min-width:1500px){
-    :root {
-      --columns: 5;
-    }
+}
+@media (min-width:1500px){
+  :root {
+    --columns: 5;
   }
+}
