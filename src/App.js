@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CardImg from './components/CardImg';
+import SampleForm from './components/SampleForm';
 import './App.css';
 
 const App = () => {
@@ -34,6 +35,7 @@ const App = () => {
         ))
       }
       </ul>
+      <SampleForm />
     </div>
   );
 }
